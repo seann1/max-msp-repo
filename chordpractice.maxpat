@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 42.0, 79.0, 919.0, 630.0 ],
+		"rect" : [ 21.0, 136.0, 919.0, 630.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -37,6 +37,36 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 11.595187,
+					"id" : "obj-16",
+					"maxclass" : "newobj",
+					"numinlets" : 3,
+					"numoutlets" : 2,
+					"outlettype" : [ "float", "float" ],
+					"patching_rect" : [ 432.0, 512.0, 107.0, 21.0 ],
+					"style" : "",
+					"text" : "makenote 80 1000"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontface" : 0,
+					"fontname" : "Arial",
+					"fontsize" : 11.595187,
+					"id" : "obj-13",
+					"maxclass" : "newobj",
+					"numinlets" : 3,
+					"numoutlets" : 0,
+					"patching_rect" : [ 432.0, 541.0, 69.0, 21.0 ],
+					"style" : "",
+					"text" : "noteout d 4"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -142,8 +172,8 @@
 			}
 , 			{
 				"box" : 				{
-					"blackkeycolor" : [ 1.0, 1.0, 0.0, 1.0 ],
-					"hkeycolor" : [ 0.5, 0.5, 0.5, 1.0 ],
+					"blackkeycolor" : [ 0.231373, 0.121569, 0.305882, 1.0 ],
+					"hkeycolor" : [ 0.223872, 0.723978, 0.68305, 1.0 ],
 					"id" : "obj-24",
 					"maxclass" : "kslider",
 					"mode" : 1,
@@ -155,7 +185,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 55.0, 415.0, 336.0, 53.0 ],
 					"style" : "",
-					"whitekeycolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+					"whitekeycolor" : [ 0.569991, 0.764706, 0.219822, 1.0 ]
 				}
 
 			}
@@ -285,6 +315,25 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-13", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 529.5, 537.0, 466.5, 537.0 ],
+					"source" : [ "obj-16", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-13", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-16", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-24", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -309,6 +358,24 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-16", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-24", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-16", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-24", 0 ]
 				}
 
 			}
